@@ -16,7 +16,9 @@ pipeline {
         }
          stage("build dockerimage"){
             steps{
+                script{
                docker.build('shubhamimage', '.')
+                }
            }
         }
     }
