@@ -14,5 +14,10 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
+         stage("build dockerimage"){
+            steps{
+               docker.build('shubhamimage', '.')
+           }
+        }
     }
 }
