@@ -23,12 +23,7 @@ pipeline {
         }
         stage('run image '){
             steps{
-                script{
-                    // This step should not normally be used in your script. Consult the inline help for details.
-                    withDockerContainer('shubhambadade07/java_app:latest') {
-                    // some block
-                   }
-                }
+                sh 'docker build -t shubhambadade07/java_app:latest .'
             }
             
         }
