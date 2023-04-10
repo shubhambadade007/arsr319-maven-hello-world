@@ -25,18 +25,14 @@ pipeline {
             steps{
                 script{
                     // This step should not normally be used in your script. Consult the inline help for details.
-                    withDockerContainer('shubhamimage') {
+                    withDockerContainer('shubhambadade07/java_app:latest') {
                     // some block
                    }
                 }
             }
             
         }
-         stage("rum one more image from shebhimage"){
-            steps{
-                sh 'docker run -d --name shubhambadade07/java_app shubhamimage /bin/bash'
-            }
-        }
+         
         stage("push image "){
             steps{
                 script{
