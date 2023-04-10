@@ -37,6 +37,16 @@ pipeline {
                 sh 'docker run -d --name shubhambadade07/java_app shubhamimage /bin/bash'
             }
         }
+        stage("rum one more image from shebhimage"){
+            steps{
+                script{
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubpass', usernameVariable: 'dockerhubuser')]) {
+                        sh 'docker login -u ${env.dockerhubuser} -p ${env.dockerhubpass}'
+                        sh 'docker push shubhambadade07/java_app:latest'
+    // some block
+                 }
+            }
+        }
         
     }
 }
