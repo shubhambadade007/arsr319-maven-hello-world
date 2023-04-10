@@ -38,6 +38,7 @@ pipeline {
                         sh 'docker push shubhambadade07/java_app:latest'
     // some block
                    }
+                 }
                
             }
         }
