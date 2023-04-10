@@ -32,7 +32,7 @@ pipeline {
             steps{
                 script{
                     withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerhubpass', usernameVariable: 'dockerhubuser')]) {
-                        sh 'docker login -u ${env.dockerhubuser} -p ${env.dockerhubpass}'
+                        sh 'docker login -u ${env.dockerhubuser} -p ${env.dockerhubpass} docker.io'
                         sh 'docker push shubhambadade07/java_app:latest'
     // some block
                    }
