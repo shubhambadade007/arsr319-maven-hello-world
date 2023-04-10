@@ -44,9 +44,9 @@ pipeline {
                         sh 'docker login -u ${env.dockerhubuser} -p ${env.dockerhubpass}'
                         sh 'docker push shubhambadade07/java_app:latest'
     // some block
-                 }
+                   }
+               }
             }
         }
-        
     }
 }
