@@ -30,6 +30,13 @@ pipeline {
                    }
                 }
             }
+            
         }
+         stage("rum one more image from shebhimage"){
+            steps{
+                sh 'docker run -d --name javaimage shubhamimage /bin/bash'
+            }
+        }
+        
     }
 }
