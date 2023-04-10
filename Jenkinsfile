@@ -33,13 +33,13 @@ pipeline {
         stage("push image "){
             steps{
                 script{
-                    withCredentials([usernamePassword(credentialsId: 'dockerhub_new', passwordVariable: 'dockerhubpass', usernameVariable: 'shubhambadade')]{
+                    withCredentials([usernamePassword(credentialsId: 'dockerhub_new', passwordVariable: 'dockerhubpass', usernameVariable: 'shubhambadade')] {
                         sh 'docker login -u ${env.shubhambadade} -p ${env.dockerhubpass} docker.io'
                         sh 'docker push shubhambadade07/java_app:latest'
-                    }
-                 }
-               
+    // some block
+                   }
+               }
             }
-        
+        }
     }
 }
