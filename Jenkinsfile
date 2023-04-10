@@ -34,7 +34,7 @@ pipeline {
         }
          stage("rum one more image from shebhimage"){
             steps{
-                sh 'docker run -d --name javaimage shubhamimage /bin/bash'
+                sh 'docker run -d --name shubhambadade07/java_app shubhamimage /bin/bash'
             }
         }
         
