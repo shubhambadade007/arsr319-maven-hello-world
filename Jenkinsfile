@@ -21,5 +21,15 @@ pipeline {
                 }
            }
         }
+        stage('run image '){
+            steps{
+                script{
+                    // This step should not normally be used in your script. Consult the inline help for details.
+                    withDockerContainer('shubhamimage') {
+                    // some block
+                   }
+                }
+            }
+        }
     }
 }
