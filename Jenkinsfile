@@ -9,6 +9,7 @@ pipeline {
             }
 
         }
+        /*
          stage("mvn build "){
             steps{
                 sh 'mvn clean package'
@@ -27,6 +28,7 @@ pipeline {
             }
             
         }
+        */
          
         stage("push image "){
             steps{
