@@ -27,7 +27,7 @@ pipeline {
             
             }
         }
-        /*
+        
         
          stage("build dockerimage"){
             steps{
@@ -36,7 +36,7 @@ pipeline {
                 }
            }
         }
-        */
+        
         stage('run image '){
             steps{
                 sh 'docker build -t shubhambadade07/java_app:latest .'
