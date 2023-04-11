@@ -49,7 +49,7 @@ pipeline {
         stage("push image "){
             steps{
                 
-                     sh 'docker login -u shubhambadade07 -p Pass@123 docker.io'
+                     sh 'docker login -u shubhambadade07 -p Pass@12345 docker.io'
                      sh 'docker push shubhambadade07/java_app:latest'
     
                     
