@@ -9,12 +9,23 @@ pipeline {
             }
 
         }
-        /*
+        
          stage("mvn build "){
             steps{
                 sh 'mvn clean package'
             }
+        } 
+        stage("code analysis"){
+            steps{
+                withSonarQubeEnv(credentialsId: 'sonar_token') {
+                sh 'mvn clean package sonar:sonar'
+            
+    
+                }
+            
+            }
         }
+        /*
          stage("build dockerimage"){
             steps{
                 script{
