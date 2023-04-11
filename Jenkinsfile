@@ -9,6 +9,7 @@ pipeline {
             }
 
         }
+        /*
         
          stage("mvn build "){
             steps{
@@ -26,7 +27,7 @@ pipeline {
                 }
             
             }
-        }
+        }*/
         
         
          stage("build dockerimage"){
